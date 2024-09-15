@@ -1,3 +1,18 @@
 /* 
     General Styles
 */
+.logo {
+    height: 50px;
+    width: 80% 
+  }
+
+body {
+  background-image: url(https://media.revistagq.com/photos/604b2f499fc97c95e82c1c14/master/pass/2101913.jpg);
+  overflow-x: scroll;
+  
+}
+
+.navbar {
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(255,255,255,0) 70%);
+}

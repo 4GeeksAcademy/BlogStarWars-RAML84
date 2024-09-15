@@ -1,0 +1,27 @@
+.card {
+    width: 18rem;
+    height: 100%;
+}
+
+.card-img-top {
+  width: 18rem;
+  height: 18rem;
+}
+
+.carousel-inner {
+  max-height: 65rem;
+  overflow: hidden;
+}
+
+
+.carousel .carousel-control-prev {
+    font-weight: bold;
+    position: absolute;
+    z-index: none;      
+  }
+  
+  .carousel .carousel-control-next {    
+    font-weight: bold;
+    position: absolute;
+    z-index: none;    
+  }
