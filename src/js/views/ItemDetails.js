@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext.js";
@@ -8,6 +8,11 @@ export const ItemDetails = () => {
     const { store, actions } = useContext(Context);
     const { people, planets, vehicles } = store;
     const params = useParams();
+
+    useEffect(() => {
+        console.log(params)
+        console.log(people)
+    },[params])
 
     const getItemDetails = (type, uid) => {
         switch (type) {
@@ -23,6 +28,7 @@ export const ItemDetails = () => {
     };
 
     const item = getItemDetails(params.type, params.uid);
+    
 
     if (!item) return <div>Item not found</div>;
 
@@ -49,7 +55,7 @@ export const ItemDetails = () => {
                         </div>
                     </div>
                 </div>
-                <div className="border-top border-danger text-danger row">
+                <div className="border-top border-warning text-warning row">
                     <h3 className="col"><strong className="d-block">Name</strong><p className="d-block">{properties.name}</p></h3>
                     {params.type === "character" && (
                         <>
@@ -81,7 +87,7 @@ export const ItemDetails = () => {
                     )}
                 </div>
                 <Link to={"/"}>
-                    <button className="btn btn-warning ms-5">Home</button>
+                    <button className="btn btn-success ms-5">Inicio</button>
                 </Link>
             </div>
         </>

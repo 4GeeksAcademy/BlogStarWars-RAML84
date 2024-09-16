@@ -19,7 +19,7 @@ export const ItemCard = ({ item, type }) => {
                     <>
                         <p className="card-text"><strong>Gender: </strong>{properties.gender}</p>
                         <p className="card-text"><strong>Eye color: </strong>{properties.eye_color}</p>
-                        <p className="card-text"><strong>Hair color: </strong>{properties.eye_color}</p>
+                        <p className="card-text"><strong>Hair color: </strong>{properties.hair_color}</p>
                     </>
                 )}
                 {type === "planet" && (
